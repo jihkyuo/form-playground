@@ -1,11 +1,10 @@
-import { FallbackBoundary } from '@/components/FallbackBoundary';
+import { AppLayout } from '@/layout/AppLayout';
 
 export default function App({ children }) {
 
   return (
-    <FallbackBoundary errorFallback={() => <>err</>} suspenseFallback={'로딩'}>
-      <div>App</div>
+    <AppLayout>
       {children}
-    </FallbackBoundary>
+    </AppLayout>
   );
 }
