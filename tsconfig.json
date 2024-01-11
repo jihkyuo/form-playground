@@ -16,13 +16,11 @@
 
     /* Linting */
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": [ "./src/*" ]
+    },
   },
-  "paths": {
-    "@/*": [ "./src/*" ]
-  },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json"}]
 }
