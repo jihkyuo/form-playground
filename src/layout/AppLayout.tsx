@@ -20,7 +20,7 @@ export function AppLayout({ children }: PropsWithChildren) {
       icon: <BarsOutlined />,
       children: [
         {
-          key: 'past',
+          key: 'list',
           label: '지난내역',
         },
       ],
