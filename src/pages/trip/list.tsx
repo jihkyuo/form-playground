@@ -6,12 +6,10 @@ import { useQuery } from '@tanstack/react-query';
 import { getTestApi } from '@/domain/service/api.service';
 
 export default function Index() {
-  const { data } = useQuery({
+  const { data = [], isLoading } = useQuery({
     queryKey: [ 'list' ],
     queryFn: getTestApi,
   });
-
-  console.log(data);
 
   const columns: ColumnsType<TripDto> = [
     TableColumn('id', row => row.id),
@@ -20,7 +18,11 @@ export default function Index() {
 
   return (
     <>
-      <Table dataSource={data.map((ele, idx) => ({ ...ele, key: idx }))} columns={columns} />
+      <Table loading={isLoading}
+             bordered
+             dataSource={data.map((ele, idx) => ({ ...ele, key: idx }))}
+             columns={columns}
+             pagination={false} />
     </>
   );
 }

@@ -13,7 +13,7 @@ type FieldType = {
 
 export default function Index() {
   const navigate = useNavigate();
-  const { data, mutate } = useMutation({
+  const { mutate } = useMutation({
     mutationFn: postTestApi,
     onSuccess: () => {
       navigate('/trip/list');
