@@ -1,6 +1,7 @@
+import { Button, Result } from 'antd';
+
 import { AppLayout } from '@/layout/AppLayout';
 import { FallbackBoundary } from '@/components/FallbackBoundary';
-import { Button, Result } from 'antd';
 
 export default function App({ children }) {
 

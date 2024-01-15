@@ -1,6 +1,7 @@
 import { PropsWithChildren, ReactNode, Suspense } from 'react';
-import { ErrorBoundary, ErrorBoundaryFallback } from '@/components/ErrorBoundary';
 import { QueryErrorResetBoundary } from '@tanstack/react-query';
+
+import { ErrorBoundary, ErrorBoundaryFallback } from '@/components/ErrorBoundary';
 
 interface Props extends PropsWithChildren {
   errorFallback: ErrorBoundaryFallback;

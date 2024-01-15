@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import { Layout, Menu, MenuProps, theme } from 'antd';
-import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { BarsOutlined } from '@ant-design/icons';
 
 const { Header, Sider, Content, Footer } = Layout;
@@ -45,12 +45,11 @@ export function AppLayout({ children }: PropsWithChildren) {
         <Sider theme={'light'}
                style={{ overflow: 'auto', height: '100vh', position: 'sticky', left: 0, top: 0, bottom: 0 }}>
           <FormButton onClick={() => navigate('form')}>예약</FormButton>
-          <Menu mode="inline"
+          <Menu mode={'inline'}
                 items={items}
                 onClick={menuNavigate}
                 selectedKeys={activeMenu}
-                defaultOpenKeys={activeMenu}
-          />
+                defaultOpenKeys={activeMenu} />
         </Sider>
         <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
           <ContentLayout style={{ background: colorBgContainer, borderRadius: borderRadiusLG }}>

@@ -1,4 +1,5 @@
 import { delay, http, HttpResponse } from 'msw';
+
 import { apiUrl } from '@/utils/api';
 import { FormBodyDto, TripDto } from '@/domain/service/service.interface';
 import { msw_db } from '@/mocks/handlers';

@@ -1,8 +1,9 @@
 import { Table } from 'antd';
 import { ColumnsType } from 'antd/es/table';
+import { useQuery } from '@tanstack/react-query';
+
 import { TripDto } from '@/domain/service/service.interface';
 import { TableColumn } from '@/components/table/TableColumn';
-import { useQuery } from '@tanstack/react-query';
 import { getTestApi } from '@/domain/service/api.service';
 
 export default function Index() {

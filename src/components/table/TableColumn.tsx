@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { ColumnType } from 'antd/es/table';
+import styled from 'styled-components';
 
 export function TableColumn<T>(
   title: string | ReactNode,
@@ -15,3 +16,6 @@ export function TableColumn<T>(
     ...options,
   };
 }
+
+const test = styled.div`
+`
